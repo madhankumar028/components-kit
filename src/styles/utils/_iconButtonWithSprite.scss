@@ -1,0 +1,9 @@
+@mixin iconButtonWithSprite($size) {
+	width: $size;
+	height: $size;
+	cursor: pointer;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: 0;
+	background-size: 100%;
+}

@@ -1,0 +1,57 @@
+@import '../../styles/tokens/all';
+
+.lp__tabs--wrapper {
+  min-height: 100px;
+  @include surface('2', null);
+  border-radius: $space--xs;
+  width: 50%;
+  .lp__tab--list { 
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
+    height: 35px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 0 1 0;
+    margin-bottom: 0;
+    .lp__tab--group {
+      display: inline-flex;
+      max-width: 90%;
+      overflow: scroll;
+      margin: 0 $space--sm;
+      scrollbar-width: none; /* For Firefox */
+      -ms-overflow-style: none; /* For Internet Explorer and Edge */
+      &::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Opera */
+      }
+    }
+    .left__arrow {
+      margin-left: $space--xs;
+    }
+  }
+  .lp__tab__list--item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+      color: $brand-primary-color;
+    }
+  }
+  .lp__tab__list--active {
+    color: $brand-primary-color;
+    border-bottom: 2px solid $brand-primary-color;
+    font-weight: 500;
+  }
+  .lp__tabs--arrow {
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .lp__tab--content {
+    padding: $space--sm;
+  }
+}

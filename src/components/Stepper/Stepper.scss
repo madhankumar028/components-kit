@@ -1,0 +1,54 @@
+// Generated with utils/create-component.js
+@import '../../styles/tokens/all';
+
+.stepper__wrapper {
+	list-style: none;
+	padding-left: 0;
+
+	.stepper__item {
+		position: relative;
+		margin-bottom: $space--sm;
+
+		.stepper {
+			display: flex;
+
+			&__button {
+				border-color: $brand-primary-color;
+				background: $brand-primary-color;
+				color: $color--white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				height: 35px;
+				width: 35px;
+				border-radius: 50%;
+			}
+
+			span {
+        margin-left: $space--sm;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        p {
+          @include get-typography("sm", "regular");
+          padding:0 !important;
+          margin: 0 !important;
+        }
+			}
+		}
+
+		// progress-bar
+		&:not(:first-child) .stepper__button::after {
+      border: 1px solid $brand-primary-color;
+      background-color: $brand-primary-color;
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -5px;
+      width: 100%;
+      z-index: -1;
+      transform: rotate(90deg);
+		}
+	}
+}

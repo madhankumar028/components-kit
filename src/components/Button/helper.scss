@@ -1,0 +1,49 @@
+@import '../../styles/tokens/all';
+
+////////////////////////// button size /////////////////////////////
+/// @type Map
+/// @access public
+$lp-button-size: (
+  'sm' : calc(1.5 * #{$base--unit}),
+  'md' : calc(2 * #{$base--unit}),
+  'lg' : calc(2.5 * #{$base--unit}),
+);
+
+/// button placeholder with basic button styles
+%btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+  padding: 0 $space--sm;
+  min-width: 164px;
+  min-height: 24px;
+  width: auto;
+  border-color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  border-style: solid;
+  text-transform: capitalize;
+}
+
+/// Creates button with three states
+/// @param {String} $text-color button text color
+/// @param {String} $background-color button background color
+@mixin button($text-color, $background-color) {
+  @extend %btn;
+  color: (if(#{$text-color}, #{$text-color}, $color--black));
+  background-color: (if(#{$background-color}, #{$background-color}, $color--white));
+  &:focus {
+    color: #{$text-color};
+    outline: none;
+    @include surface("4", currentColor);
+  }
+  &:hover {
+    color: #{$text-color};
+    opacity: 0.9;
+    @include surface("2", null);
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

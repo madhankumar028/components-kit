@@ -1,0 +1,12 @@
+@import '../../styles/tokens/all.scss';
+
+.dropDown {
+	select {
+		padding: 6px 12px;
+		color: #495057;
+		background-color: $color--white;
+		background-clip: padding-box;
+		border: 1px solid #ced4da;
+		border-radius: .25rem;
+	}
+}

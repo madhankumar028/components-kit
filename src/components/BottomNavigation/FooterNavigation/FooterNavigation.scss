@@ -1,0 +1,114 @@
+@import '../../../styles/tokens/all';
+
+.footerNavigation__modal {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: $modal-background-color;
+	z-index: 1040;
+}
+
+.footerNavigation {
+	background: $color--white;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	box-shadow: -2px -2px 14px 0 $box-shadow-color;
+	z-index: 1040;
+  border-radius: $space--md $space--md 0 0;
+
+	&__content {
+		position: relative;
+    padding: 0 $space--md;
+    overflow: hidden;
+	}
+
+  &__menus {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    border-top: 1px solid #c2c2c2;
+    border-radius: $space--md $space--md 0 0;
+
+    &__openBtn {
+      @include get-typography("2xs", "regular");
+      color: $brand-primary-color;
+      border: none;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: $space--xs;
+
+      span {
+        margin-top: 4px;
+      }
+
+      &--active {
+        color: $color--white;
+        background: $brand-primary-color;
+      }
+    }
+  }
+
+	&__closeBtn {
+		font-size: 36px;
+		display: none;
+		position: absolute;
+		top: 0;
+		right: $space--md;
+		border: none;
+		background: none;
+		padding: 0;
+
+		&--active {
+			display: block;
+		}
+	}
+}
+
+.footerNav-icon {
+  overflow: hidden;
+  position: relative;
+  background-position:center 0;
+  background-image: url('../../../assets/footerNavigation.webp');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  &--explore {
+    background-position:center 0;
+  }
+
+  &--insurance {
+    background-position:center -29px;
+  }
+
+  &--profile {
+    background-position:center -59px;
+  }
+
+  &--tools {
+    background-position:center -88px;
+  }
+
+  &--explore--active {
+    background-position:center -120px;
+  }
+
+  &--insurance--active {
+    background-position:center -150px;
+  }
+
+  &--profile--active {
+    background-position:center -179px;
+  }
+
+  &--tools--active {
+    background-position:center -209px;
+  }
+}

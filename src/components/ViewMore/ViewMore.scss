@@ -1,0 +1,113 @@
+@import '../../styles/tokens/all';
+@import '../../styles/utils/iconButtonWithSprite';
+
+.viewMoreModal {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: $modal-background-color;
+	z-index: 1040;
+}
+
+.viewMoreContentWrapper {
+	background: $color--white;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	box-shadow: -2px -2px 14px 0 $box-shadow-color;
+	z-index: 1040;
+	border-radius: $space--md $space--md 0 0;
+
+	.content {
+		position: relative;
+		padding: 0 $space--md;
+		overflow: hidden;
+
+		.closeBtn {
+			font-size: 36px;
+			position: absolute;
+			top: 0;
+			right: $space--md;
+			border: none;
+			background: none;
+			padding: 0;
+		}
+	}
+}
+
+.viewMore {
+	position: fixed;
+	bottom: 65px;
+	right: 16px;
+	z-index: 101;
+
+	.toggler {
+		@include iconButtonWithSprite(55px);
+
+		&.-webp {
+			background-image: url('../../assets/Navigation.webp');
+		}
+
+		&.-png {
+			background-image: url('../../assets/Navigation.png');
+		}
+
+		&.--open {
+			background-position: center -715px;
+		}
+
+		&.--close {
+			background-position: center -660px;
+		}
+	}
+
+	.container {
+		justify-content: center;
+		@include get-typography('xs', 'regular');
+		color: white;
+		background-color: $brand-primary-color;
+		border-radius: 32px;
+		text-align: center;
+		padding: 15px 0;
+		margin-bottom: 12px;
+
+		&.-hide {
+			display: none;
+		}
+
+		.item {
+			margin-bottom: 7px;
+
+			.icon {
+				@include iconButtonWithSprite(40px);
+
+				&.-webp {
+					background-image: url('../../assets/mediaIcon.webp');
+				}
+
+				&.-png {
+					background-image: url('../../assets/mediaIcon.png');
+				}
+
+				margin-left: 7px;
+				display: block;
+				background-size: 85%;
+
+				&.--insurance {
+					background-position: center -167px;
+				}
+
+				&.--tools {
+					background-position: center -235px;
+				}
+
+				&.--explore {
+					background-position: center -132px;
+				}
+			}
+		}
+	}
+}

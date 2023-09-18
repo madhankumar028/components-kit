@@ -1,0 +1,27 @@
+@import '../../../../styles/tokens/all';
+
+.explore {
+  &__title {
+    @include get-typography('lg', 'bold');
+    margin: $space--sm 0;
+  }
+
+  &__description {
+    @include get-typography('sm', 'regular');
+  }
+
+  &__lists {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    padding: $space--sm 0;
+    border-bottom: 1px solid $color-outline-grey;
+    color: $brand-primary-color;
+    white-space: nowrap;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    text-decoration: none;
+  }
+}

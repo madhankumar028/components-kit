@@ -1,0 +1,57 @@
+@import "../../styles/tokens/all";
+
+.accordion {
+  background: $color--white;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 5px;
+
+  &__head {
+    padding: $space--none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    @include get-typography("sm", "medium");
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    color: #212529;
+    
+    .icon {
+      @include get-typography("sm", "medium");
+      color: $brand-primary-color;
+    }
+  }
+
+  &__body {
+    @include get-typography("sm", "regular");
+    padding: 0px 0px 0px 22px;
+    color: #212529;
+    line-height: 1.5;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width:1024px) {
+    &__title {
+      @include get-typography("sm", "medium");
+    }
+
+    &__body {
+      @include get-typography("sm", "regular");
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    transition: max-height .35s ease;
+
+    &--show {
+      max-height: 500px !important;
+    }
+  }
+}

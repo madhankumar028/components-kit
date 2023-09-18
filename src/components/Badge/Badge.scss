@@ -1,0 +1,38 @@
+@import '../../styles/tokens/all';
+
+
+%badge {
+	display: inline-flex;
+	max-height: 24px;
+	width: fit-content;
+	border-radius: 5px;
+	padding: 0 $space--xs;
+	box-sizing: border-box;
+}
+
+@mixin badge($text-color, $background-color) {
+	@extend %badge;
+	color: $text-color;
+	background-color: $background-color;
+	border: 1px solid currentColor;
+}
+
+.lp-badge--primary {
+	@include badge($brand-primary-color, $color-blue-10);
+}
+
+.lp-badge--warning {
+	@include badge($notification-warning-ink, $notification-warning);
+}
+
+.lp-badge--success {
+	@include badge($notification-success-ink, $notification-success);
+}
+
+.lp-badge--danger {
+	@include badge($notification-danger-ink, $notification-danger);
+}
+
+.lp-badge--default {
+	@include badge($notification-default-ink, $notification-default);
+}

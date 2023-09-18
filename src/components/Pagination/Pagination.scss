@@ -1,0 +1,51 @@
+// Generated with utils/create-component.js
+@import '../../styles/tokens/all';
+
+$space--16: calc(#{$space--sm} + #{$space--2xs});
+
+.lp__pagination {
+  margin-top: $space--16;
+  display: flex;
+  justify-content: center;
+  ul {
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    list-style-type: none;
+    margin-bottom: 0;
+    li {
+      cursor: pointer;
+      color: $color-grey-50;
+      a {
+        text-decoration: none;
+        color: $brand-primary-color;
+      }
+      &:hover {
+        a {
+          text-decoration: underline;
+        }
+      }
+      &:not(:first-child):not(:last-child) {
+        margin: 0 $space--sm;
+      }
+      &.bordered {
+        padding: 5px 10px;
+        border-radius: $space--2xs;
+        border: 1px solid #d3d3d3;
+        &:hover {
+          transition: 0.5s;
+          border: 1px solid $brand-primary-color;
+          color: $brand-primary-color;
+        }
+      }
+      &.selected {
+        padding: 5px 10px;
+        border: 1px solid $brand-primary-color;
+        color: $brand-primary-color;
+      }
+      i {
+        font-size: large;
+      }
+    }
+  }
+}

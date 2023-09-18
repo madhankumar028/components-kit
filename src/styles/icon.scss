@@ -1,0 +1,188 @@
+
+  .lifepal__icon {    
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      // background-image: url("../assets/iconSprites.webp");
+      background-image: url("#{$cdnURL}");
+      background-repeat: no-repeat;
+      content: "";
+      width: 25px;
+      height: 25px;
+      background-position: center 0px;
+      background-size: 110%;
+    }    
+    &--search-child {
+      &:hover::after {
+        background-position: center -517px;
+      }
+      &::after {
+        background-position: center -495px;
+        left: -8px;
+        background-size: 90%;
+      }
+    }
+    &--search {
+      &:hover::after {
+        background-position: center -446px;
+      }
+      &::after {
+        background-position: center -426px;
+        left: -15px;
+        top: 50%;
+        background-size: 78%;
+      }
+    }
+    &--search-mobile {
+      &::after {
+        background-position: center -604px;
+        left: -2px;
+        top: 64%;
+        background-size: 109%;
+      }
+    }
+    &--search-mobile-user {
+      &::after {
+        background-position: center -487px;
+        left: -9px;
+        top: 64%;
+        background-size: 85%;
+      }
+    }
+    &--close {
+      &::after {
+        background-position: center -2319px;
+        left: 17px;
+        top: 57%;
+        background-size: 109%;
+      }
+    }
+    &--login {
+      &:hover::after {
+        background-position: center -485px;
+      }
+      &::after {
+        background-position: center -466px;
+        left: -15px;
+        top: 55%;
+        background-size: 78%;
+      }
+    }
+    &--whatsapp {
+      &:hover::after {
+        background-position: center -1108px;
+        top: 54%;
+      }
+      &::after {
+        background-position: center -1090px;
+        left: -16px;
+        top: 55%;
+        background-size: 78%;
+      }
+    }
+
+    &--whatsapp--white {
+      &::after {
+        background-position: center -1879px;
+        left: -18px;
+        top: 55%;
+        background-size: 125%;
+      }
+    }
+    &--call {
+      &:hover::after {
+        background-position: center -407px;
+        top: 53%;
+      }
+      &::after {
+        background-position: center -388px;
+        left: -16px;
+        top: 56%;
+        background-size: 78%;
+      }
+    }
+    &--burger {
+      &::after {
+        background-position: center -2075px;
+        left: 15px;
+        top: 46%;
+        background-size: 100%;
+      }
+    }
+
+    &--burger--white {
+      &::after {
+        background-position: center -2100px;
+        left: 15px;
+        top: 46%;
+        background-size: 100%;
+      }
+    }
+    &--call-slide {
+      &::after {
+        background-position: center -388px;
+        left: -19px;
+        top: 50%;
+        background-size: 78%;
+      }
+    }
+    &--whatsapp-slide {
+      &::after {
+        background-position: center -1090px;
+        left: -19px;
+        top: 50%;
+        background-size: 78%;
+      }
+    }
+    &--profile {
+      &::after {
+        background-position: center -1953px;
+        left: 15px;
+        top: 46%;
+        background-size: 120%;
+      }
+    }
+    &--profile--white {
+      &::after {
+        background-position: center -2658px;
+        left: -19px;
+        top: 46%;
+        background-size: 75%;
+      }
+    }
+    &--arrow {
+      &-left-blue::after {
+        background-position: center -818px;
+        left: 6px;
+        top: 55%;
+        background-size: 78%;
+      }
+
+      &-right-blue::after {
+        background-position: center -1233px;
+        left: -6px;
+        top: 10px;
+        background-size: 120%;
+      }
+
+      &-up-small::after {
+        background-position: center -631px;
+        width: 15px;
+        height: 15px;
+        background-size: 120%;
+      }
+
+      &-down-small::after {
+        background-position: center -685px;
+        width: 15px;
+        height: 15px;
+        background-size: 120%;
+      }
+    }
+  }

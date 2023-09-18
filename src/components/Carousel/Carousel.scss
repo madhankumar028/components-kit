@@ -1,0 +1,95 @@
+@import "../../styles/tokens/all";
+
+.lp__carousel {
+  .carousel {
+    position: relative;
+    &__slider {
+      padding: $space--sm 0;
+
+      @media (max-width: 768px) {
+        &.center-mode {
+          padding: $space--sm $space--2xl;
+        }
+      }
+    }
+
+    &__slider-tray {
+      transition: transform 0.5s;
+      transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+      will-change: transform;
+      padding-left: 0 !important;
+    }
+
+    &__slide {
+      margin: 0 $space--sm;
+      box-sizing: border-box;
+      &:first-child {
+        margin-left: 2px;
+        margin-right: $space--sm;
+      }
+      &:last-child {
+        margin-left: $space--sm;
+        margin-right: 2px;
+      }
+    }
+
+    &__inner-slide {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      border-radius: $space--xs;
+      box-shadow: 0 3px 13px -2px $color-outline-grey;
+      background: $color--white;
+      padding: $space--lg;
+      position: static !important;
+    }
+
+    &__dot-group {
+      text-align: center;
+      padding: $space--xs 0;
+    }
+
+    &__dot {
+      content: "";
+      height: $space--sm;
+      width: $space--sm;
+      display: inline-block;
+      background: $black--disabled;
+      border-radius: $space--xs;
+      cursor: pointer;
+      margin-right: $space--2xs;
+      border: none;
+      padding: 0;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__single-dot {
+      &.selected {
+        width: $space--xl;
+        background: $brand-primary-color;
+      }
+      > div {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    %btn {
+      position: absolute;
+      bottom: 50%;
+      background: $color--white;
+      border: 1px solid $color-outline-grey;
+      border-radius: 50%;
+    }
+    .button__next {
+      @extend %btn;
+      right: 0;
+    }
+    .button__back {
+      @extend %btn;
+      left: 0;
+    }
+  }
+}

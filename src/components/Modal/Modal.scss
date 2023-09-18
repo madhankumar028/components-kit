@@ -1,0 +1,138 @@
+@import "../../styles/tokens/all";
+
+.lp__modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1050;
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	outline: 0;
+	transition: opacity .15s linear;
+
+	&.show {
+		display: block;
+		transition: opacity .15s linear;
+	}
+
+	&-dialog {
+		z-index: 1050;
+		margin: $space--lg auto;
+		position: relative;
+		transition: transform .3s ease-out;
+
+		&-enter {
+			transform: translate(0, -50px);
+		}
+
+		&-enter-active {
+			transform: none;
+			transition: transform .3s ease-out;
+		}
+
+		&-exit {
+			transform: none;
+		}
+
+		&-exit-active {
+			transform: translate(0, -50px);
+			transition: transform .3s ease-out;
+		}
+
+		&--sm {
+			width: 300px;
+		}
+
+		&--md {
+			width: 500px;
+		}
+
+		&--lg {
+			width: 800px;
+		}
+
+		@media (min-width: 320px) and (max-width: 768px) {
+			&--sm {
+				width: auto;
+				max-width: 300px;
+			}
+
+			&--md {
+				width: auto;
+				max-width: 500px;
+			}
+
+			&--lg {
+				width: auto;
+				max-width: 800px;
+			}
+		}
+
+		@media (min-width: 768px) {
+			&--lg {
+				width: auto;
+				max-width: 800px;
+			}
+		}
+	}
+
+	&-content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		background-color: $color--white;
+		border: 1px solid $color-outline-grey;
+		border-radius: $space--sm;
+		outline: 0;
+		min-height: 50px;
+	}
+
+	&-header {
+		padding: $space--sm;
+		border-bottom: 1px solid $color-outline-grey;
+		border-top-left-radius: $space--sm;
+		border-top-right-radius: $space--sm;
+	}
+
+	&-body {
+		position: relative;
+		flex: 1 1 auto;
+		padding: $space--sm;
+	}
+
+	&-footer {
+		padding: $space--sm;
+		border-top: 1px solid $color-outline-grey;
+		border-bottom-left-radius: $space--sm;
+		border-bottom-right-radius: $space--sm;
+	}
+
+	&-backdrop {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1040;
+		width: 100vw;
+		height: 100vh;
+		background-color: $color--black;
+		opacity: 0;
+
+		&.show {
+			opacity: 0.3;
+		}
+	}
+
+	&-close-button {
+		@include get-typography('xl', 'regular');
+		position: absolute;
+		top: 5px;
+		right: 12px;
+		cursor: pointer;
+		padding: $space--none;
+		background: none;
+		border: none;
+	}
+}

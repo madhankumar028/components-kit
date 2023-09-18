@@ -1,0 +1,101 @@
+@import '../../styles/tokens/all';
+
+.seo__accordion {
+  border-radius: $space--sm;
+  overflow: hidden;
+
+  h3 {
+    @include get-typography("md", "bold");
+    margin: 0;
+  }
+
+  &--item {
+    width: 100%;
+    color: $color--white;
+    overflow: hidden;
+    box-shadow: none !important;
+
+    &__border {
+      border: 1px solid #c2c2c2;
+      border-radius: $space--sm;
+      box-shadow: 0 2px 4px 0 $box-shadow-color  !important;
+    }
+
+    @include surface('2', null);
+
+    &:not(:last-child) {
+      margin-bottom: $space--md;
+    }
+
+    &--label {
+      display: flex;
+      padding: $space--sm;
+      font-weight: bold;
+      cursor: pointer;
+      color: $color--black;
+
+      &:hover {
+        @include surface('2', null);
+        background-color: #f7faff;
+      }
+
+      &.arrow--left {
+        &::before {
+          content: "\276F";
+          transform: rotate(-90deg);
+          width: 18px;
+          height: 18px;
+          text-align: center;
+          transition: all .35s;
+          color: $brand-primary-color;
+          font-weight: 100;
+          margin-right: $space--xs;
+        }
+      }
+
+      &.arrow--right {
+        justify-content: space-between;
+        &::after {
+          content: "\276F";
+          transform: rotate(-90deg);
+          width: 18px;
+          height: 18px;
+          text-align: center;
+          transition: all .35s;
+          color: $brand-primary-color;
+          font-weight: 100;
+        }
+      }
+    }
+
+    &--body {
+      height: 0;
+      padding: 0 $space--md;
+      color: $color--black;
+      background: white;
+      transition: all .35s;
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  // :checked
+  input:checked {
+    +.seo__accordion--item--label {
+      border-bottom: 1px solid #c2c2c2;
+
+      &::before, &::after {
+        transform: rotate(90deg);
+      }
+    }
+
+    ~.seo__accordion--item--body {
+      height: max-content;
+      padding: $space--sm;
+    }
+  }
+}

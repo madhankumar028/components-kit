@@ -1,0 +1,97 @@
+@import '../../../styles/tokens/all';
+
+.registration {
+  &__background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $modal-background-color;
+    padding: $space--xl 0;
+    z-index: 99999;
+  }
+
+  &__box {
+    position: absolute;
+    top: 30px;
+    margin-top: 34px;
+    width: 340px;
+    padding: $space--lg;
+    border-radius: $space--xs;
+    box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.16);
+    background: $color--white;
+
+    .field {
+      &__text {
+        margin-bottom: $space--sm;
+      }
+
+      &__birthdate {
+        display: grid;
+        grid-gap: 0.5%;
+        grid-template-columns: 33% 33% 33%;
+        margin-top: $space--2xs;
+        margin-bottom: $space--md;
+
+        select {
+          @include get-typography('sm', 'regular');
+          width: 100%;
+          
+
+          &:hover {
+            border: 1px solid $brand-primary-color;
+          }
+        }
+      }
+
+      &__term {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: $space--sm;
+
+        span {
+          @include get-typography('sm', 'regular');
+          a {
+            color: $brand-primary-color;
+          }
+        }
+      }
+    }
+
+    .gender__label, .birthdate__label {
+      @include get-typography('sm', 'regular');
+
+      &::after {
+        content: "*";
+        color: $brand-secondary-color;
+      }
+    }
+    .lp-radio__wrapper {
+      border: 1px solid $color-grey-60;
+      border-radius: $space--lg;
+      margin: $space--xs $space--sm $space--xs 0;
+      padding: $space--2xs;
+      padding-right: $space--sm;
+
+      label {
+        @include get-typography('sm', 'regular');
+      }
+
+      input {
+        margin-bottom: 0;
+      }
+    }
+
+    input[type="tel"] {
+      padding: 0 45px !important;
+    }
+
+    .error-msg {
+      @include get-typography('sm', 'regular');
+      color: $brand-secondary-color;
+    }
+  }
+}

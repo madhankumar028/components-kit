@@ -1,0 +1,58 @@
+$brand-primary-color: #1D66DD;
+$brand-secondary-color: #E81A1A;
+
+$color--black   : #333333;
+$color--white   : #ffffff;
+
+$color-outline-grey: #dfdfdf;
+$color-grey-100 : #333333;
+$color-grey-90  : #484848;
+$color-grey-80  : #5C5C5C;
+$color-grey-70  : #717171;
+$color-grey-50  : #989898;
+$color-grey-60  : #c2c2c2;
+
+$color-blue-70  : #164DA6;
+$color-blue-60  : #1D66DD;
+$color-blue-50  : #4A85E4;
+$color-blue-40  : #77A3EB;
+$color-blue-30  : #A5C2F1;
+$color-blue-20  : #D2E0F8;
+$color-blue-10  : #d0ddf5;
+
+$color-lp-grey: #b6b6b6;
+$color-outline-grey: #dfdfdf;
+$color-washed-blue: #4b87e0;
+$color-pastel-blue: #73a9ea;
+$color-barely-blue: #e4eefd;
+$color-darker-blue: #06409f;
+$color-darker-red: #ea4b4b;
+$color-pastel-red: #ef6767;
+$color-light-green: #c9ffd5;
+$color-green: #00bd56;
+$color-dark-green: #28bc0c;
+$color-orange: #f39c12;
+
+$notification-warning  : #feefd9;
+$notification-danger   : #fbdbdb;
+$notification-success  : #d2f3ea;
+$notification-default  : #f5f5f5;
+
+$notification-warning-ink: #faaf40;
+$notification-danger-ink: #f95151;
+$notification-success-ink: #1ec494;
+$notification-primary-ink: $brand-primary-color;
+$notification-default-ink: $color-grey-70;
+
+/* 
+* ink colors (with variations only for black and white)
+*/
+$white--high      : rgba($color--white, 1);
+$white--medium    : rgba($color--white, 0.91);
+$white--disabled  : rgba($color--white, 0.64);
+
+$black--high      : rgba($color--black, 0.85);
+$black--medium    : rgba($color--black, 0.64);
+$black--disabled  : rgba($color--black, 0.43);
+
+$modal-background-color: rgba(0, 0, 0, 0.5);

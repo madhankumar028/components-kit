@@ -1,0 +1,147 @@
+@import '../../styles/tokens/all';
+
+.lp__input--group {
+	.lp__input--wrapper {
+		position: relative;
+		width: 100%;
+		.lp__input {
+			width: 100%;
+			@include get-typography('sm', 'regular');
+			display: block;
+			min-height: 32px;
+			padding: 0 20px;
+			background: $color--white;
+			color: $color--black;
+			border: 1px solid $color-grey-60;
+			border-radius: 4px;
+			box-sizing: border-box;
+			&:focus {
+				outline: none;
+				border-color: $brand-primary-color;
+				~ .lp__input--label {
+					top: -8px;
+					color: $brand-primary-color;
+					@include get-typography('2xs', 'regular');
+				}
+			}
+			&:hover {
+				border-color: $brand-primary-color;
+				cursor: pointer;
+				~ .lp__input--label {
+					color: $brand-primary-color;
+				}
+			}
+			&--sm {
+				height: 32px;
+				max-height: 32px;
+			}
+			&--md {
+				height: 40px;
+				max-height: 40px;
+			}
+			&--lg {
+				height: 48px;
+				max-height: 48px;
+			}
+		}
+		.lp__input--label {
+			color: $color-grey-90;
+			@include get-typography('xs', 'regular');
+			font-weight: normal;
+			position: absolute;
+			pointer-events: none;
+			left: 15px;
+			padding: 0 5px;
+			background: $color--white;
+			text-transform: capitalize;
+			transition: 0.2s ease all; 
+			-moz-transition: 0.2s ease all; 
+			-webkit-transition: 0.2s ease all;
+		}
+		.lp__input--required {
+			&:after {
+				content: '*';
+				color: red;
+				position: absolute;
+				right: 0;
+			}
+		}
+		.lp__input::placeholder {
+			opacity: 0;
+		}
+		input[type='tel'] {
+			padding: 0 40px;
+		}
+		.lp__input:not(:placeholder-shown) + .lp__input--label {
+			top: -8px;
+			@include get-typography('2xs', 'regular');
+		}
+		.input__prefix {
+			position: absolute;
+			left: 15px;
+			color: #323840;
+			@include get-typography('sm', 'regular');
+			font-weight: 400;
+		}
+		.lp__input--suffix {
+			position: absolute;
+			right: 15px;
+			top: 25%;
+			.lp-loader {
+				pointer-events: none;
+				height: 14px;
+				width: 14px;
+			}
+			.ion-md-alert {
+				color: $brand-secondary-color;
+			}
+		}
+	}
+	.lp__input--error {
+		.lp__input {
+			border-color: $notification-danger-ink;
+			&:focus {
+				outline: none;
+				border-color: $notification-danger-ink;
+				~ .lp__input--label {
+					top: -8px;
+					color: $notification-danger-ink;
+					@include get-typography('2xs', 'regular');
+				}
+			}
+			&:hover {
+				border-color: $notification-danger-ink;
+				cursor: pointer;
+				~ .lp__input--label {
+					color: $notification-danger-ink;
+				}
+			}
+		}
+		.lp__input--label {
+			color: $notification-danger-ink;
+		}
+	}
+	.disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+	.sm {
+		.lp__input--label, .input__prefix {
+			top: 6px;
+		}
+	}
+	.md {
+		.lp__input--label, .input__prefix {
+			top: 9.5px;
+		}
+	}
+	.lg {
+		.lp__input--label, .input__prefix {
+			top: 13.5px;
+		}
+	}
+	.lp__help {
+		@include get-typography('xs', 'regular');
+		color: $notification-danger-ink;
+	}
+}

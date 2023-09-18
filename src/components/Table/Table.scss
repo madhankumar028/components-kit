@@ -1,0 +1,67 @@
+// Generated with utils/create-component.js
+@import '../../styles/tokens/all';
+
+.lp__table--wrapper {
+  .lp__table--toolbar {
+    .lp__input--group {
+      width: 25%;
+      margin-bottom: $space--lg;
+    }
+  }
+  .table {
+    display: inline-block;
+    border-spacing: 0;
+    border: 1px solid #ededed;
+    border-radius: $space--xs;
+  }
+
+  .table .tr:last-child .td {
+    border-bottom: 0;
+  }
+
+  .table .th,
+  .table .td {
+    margin: 0;
+    padding: $space--sm;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    position: relative;
+    height: 65px;
+    box-sizing: border-box;
+  }
+
+  .th {
+    border-bottom: 1px solid $brand-primary-color !important;
+    @include get-typography('xs', 'bold');
+    color: $color--black;
+  }
+
+  .td {
+    color: #717171;
+    @include get-typography('sm', 'regular');
+  }
+
+  .table .th:last-child,
+  .table .td:last-child {
+    border-right: 0;
+  }
+
+  .table .th::before {
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: $space--xs solid transparent;
+    border-right: $space--xs solid transparent;
+  }
+
+  .table .th.sort-asc::before {
+    border-bottom: 5px solid #22543d;
+  }
+
+  .table .th.sort-desc::before {
+    border-top: 5px solid #22543d;
+  }
+}

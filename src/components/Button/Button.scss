@@ -1,0 +1,55 @@
+@import './helper.scss';
+
+.lp-button-default {
+  @include button('', '');
+  border: none;
+}
+
+.lp-button-primary {
+  @include button($color--white, $brand-primary-color);
+}
+
+.lp-button-secondary {
+  @include button($color--white, $brand-secondary-color);
+}
+
+.lp-button-danger {
+  @include button($color--white, $brand-secondary-color);
+}
+
+.lp-button-sm {
+  height: #{map-get($lp-button-size, 'sm')};
+}
+
+.lp-button-md {
+  height: #{map-get($lp-button-size, 'md')};
+}
+
+.lp-button-lg {
+  height: #{map-get($lp-button-size, 'lg')};
+}
+
+.lp-button-block {
+  width: 100%;
+}
+
+.lp-button-loading {
+  pointer-events: none;
+}
+
+.lp-button-ghost {
+  @include button('', $color--white);
+  border: 1px solid #c2c2c2;
+  &:hover {
+    @include surface('1', null);
+    border-color: $brand-primary-color;
+  }
+  &:focus {
+    border-color: #164ba2;
+    @include surface('1', null);
+  }
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

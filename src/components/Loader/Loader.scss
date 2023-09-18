@@ -1,0 +1,32 @@
+@import '../Button/helper.scss';
+
+.lp-loader {
+  display: block;
+  margin: auto;
+  border: 2px solid;
+  border-radius: 50%;
+  animation: rotation 0.8s infinite linear;
+  &.loader {
+    &--sm {
+      height: $space--sm;
+      width: $space--sm;
+    }
+    &--md {
+      height: 14px;
+      width: 14px;
+    }
+    &--lg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}

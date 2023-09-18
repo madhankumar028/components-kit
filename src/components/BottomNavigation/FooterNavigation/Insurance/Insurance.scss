@@ -1,0 +1,38 @@
+@import '../../../../styles/tokens/all';
+
+.insurance {
+  background: $color--white;
+  width: 100%;
+  padding: $space--md 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__title {
+    @include get-typography('xl', 'bold');
+  }
+
+  &__subtitle {
+    @include get-typography('md', 'regular');
+    line-height: 1.5;
+    margin: $space--xs 0;
+
+    div {
+      text-align: center;
+      margin: $space--2xs 0;
+    }
+  }
+
+  a {
+    @include get-typography('md', 'medium');
+    line-height: 18px;
+    border-radius: $space--2xs;
+    padding: $space--xs 0;
+    margin: $space--2xs 0;
+    background: $color-pastel-red;
+    color: $color--white;
+    text-decoration: none;
+    width: 85%;
+    text-align: center;
+  }
+}

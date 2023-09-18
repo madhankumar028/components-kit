@@ -1,0 +1,81 @@
+@import './tokens/all';
+
+.heading-xs-r {
+	@include get-typography('xs', 'regular');
+}
+.heading-xs-m {
+	@include get-typography('xs', 'medium');
+}
+.heading-xs-b {
+	@include get-typography('xs', 'bold');
+}
+
+.heading-sm-r {
+	@include get-typography('sm', 'regular');
+}
+.heading-sm-m {
+	@include get-typography('sm', 'medium');
+}
+.heading-sm-b {
+	@include get-typography('sm', 'bold');
+}
+
+.heading-md-m {
+	@include get-typography('md', 'medium');
+}
+.heading-md-r {
+	@include get-typography('md', 'regular');
+}
+.heading-md-b {
+	@include get-typography('md', 'bold');
+}
+
+.heading-lg-m {
+	@include get-typography('lg', 'medium');
+}
+.heading-lg-r {
+	@include get-typography('lg', 'regular');
+}
+.heading-lg-b {
+	@include get-typography('lg', 'bold');
+}
+
+.heading-xl-m {
+	@include get-typography('xl', 'medium');
+}
+.heading-xl-r {
+	@include get-typography('xl', 'regular');
+}
+.heading-xl-b {
+	@include get-typography('xl', 'bold');
+}
+
+.d-flex {
+	display: flex;
+}
+
+.flex-direction-vertical {
+	flex-direction: column;
+}
+
+.flex-direction-horizontal {
+	flex-direction: row;
+}
+
+.label-discount {
+	@include get-typography('sm', 'bold');
+	padding: 2px $space--2xs;
+	margin: 0 2px;
+	border-radius: 2px;
+	color: $color--white;
+	background: $color-orange;
+}
+
+.label-cashback {
+	@include get-typography('sm', 'bold');
+	padding: 2px $space--2xs;
+	margin: 0 2px;
+	border-radius: 2px;
+	color: #00b496;
+	background: #e5f7f5;
+}

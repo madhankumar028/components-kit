@@ -1,0 +1,21 @@
+@import '../Button/helper.scss';
+
+
+.lp-icon {
+	display: inline-flex;
+	min-height: 40px;
+	min-width: 40px;
+	border-radius: 10px;
+}
+
+.lp-icon--primary {
+  @include button($color--white, $brand-primary-color);
+}
+
+.lp-icon--secondary {
+  @include button($color--white, $brand-secondary-color);
+}
+
+.lp-icon--danger {
+  @include button($color--white, $brand-secondary-color);
+}
