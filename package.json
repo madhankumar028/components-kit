@@ -1,12 +1,13 @@
 {
-  "name": "@lifepal/lifepal-design-system",
-  "description": "Lifepal component library",
-  "version": "0.1.1",
+  "name": "@react/components-kit",
+  "description": "React component library",
+  "version": "0.0.1",
   "main": "build/src/index.js",
   "peerDependencies": {
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
   },
+  "author": "Madhankumar J<madhankumar028@gmail.com>",
   "files": [
     "build"
   ],
@@ -97,15 +98,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lifepal/design-system.git"
+    "url": "git+https://github.com/madhankumar028/components-kit.git"
   },
   "resolutions": {
     "@types/react": "^16.9.34"
   },
-  "author": "Lifepal frontend team",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lifepal/design-system/issues"
+    "url": "https://github.com/madhankumar028/components-kit/issues"
   },
-  "homepage": "https://github.com/lifepal/design-system#readme"
+  "homepage": "https://github.com/madhankumar028/components-kit#readme"
 }
